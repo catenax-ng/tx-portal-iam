@@ -66,7 +66,7 @@ jobs:
         with:
           sarif_file: "trivy-results1.sarif"
 
-  analyze-product-portal-iam_iam-import:
+  analyze-portal-iam_iam-import:
     runs-on: ubuntu-latest
     permissions:
       actions: read
@@ -99,7 +99,7 @@ jobs:
         with:
           sarif_file: "trivy-results2.sarif"
 
-  analyze-product-portal-iam_iam-import-dev:
+  analyze-portal-iam_iam-import-dev:
     runs-on: ubuntu-latest
     permissions:
       actions: read
@@ -132,7 +132,7 @@ jobs:
         with:
           sarif_file: "trivy-results3.sarif"
 
-  analyze-product-portal-iam_iam-import-int:
+  analyze-portal-iam_iam-import-int:
     runs-on: ubuntu-latest
     permissions:
       actions: read
@@ -165,7 +165,7 @@ jobs:
         with:
           sarif_file: "trivy-results4.sarif"
 
-  analyze-product-portal-iam_iam-import-pen:
+  analyze-portal-iam_iam-import-pen:
     runs-on: ubuntu-latest
     permissions:
       actions: read
@@ -198,7 +198,7 @@ jobs:
         with:
           sarif_file: "trivy-results5.sarif"
 
-  analyze-product-portal-iam_iam-import-beta:
+  analyze-portal-iam_iam-import-beta:
     runs-on: ubuntu-latest
     permissions:
       actions: read
@@ -231,7 +231,7 @@ jobs:
         with:
           sarif_file: "trivy-results6.sarif"
 
-  analyze-product-portal-iam_iam-import-pre-prod:
+  analyze-portal-iam_iam-import-pre-prod:
     runs-on: ubuntu-latest
     permissions:
       actions: read
