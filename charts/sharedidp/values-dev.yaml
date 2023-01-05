@@ -18,6 +18,51 @@
 ###############################################################
 
 keycloak:
+  extraVolumes:
+    - name: themes-catenax-shared
+      emptyDir: {}
+    - name: themes-catenax-shared-portal
+      emptyDir: {}
+    - name: realms
+      emptyDir: {}
+    - name: realm-secrets
+      secret:
+        secretName: secret-sharedidp-realms
+  extraVolumeMounts:
+    - name: themes-catenax-shared
+      mountPath: "/opt/bitnami/keycloak/themes/catenax-shared"
+    - name: themes-catenax-shared-portal
+      mountPath: "/opt/bitnami/keycloak/themes/catenax-shared-portal"
+    - name: realms
+      mountPath: "/realms"
+    - name: realm-secrets
+      mountPath: "/secrets"
+  initContainers:
+    - name: import
+      image: ghcr.io/catenax-ng/tx-portal-iam_iam-import-dev:latest
+      imagePullPolicy: Always
+      command:
+        - sh
+      args:
+        - -c
+        - |
+          echo "Copying themes-catenax-shared..."
+          cp -R /import/themes/catenax-shared/* /themes-catenax-shared
+          echo "Copying themes-catenax-shared-portal..."
+          cp -R /import/themes/catenax-shared-portal/* /themes-catenax-shared-portal
+          echo "Copying realms..."
+          cp -R /import/catenax-shared/realms/* /realms
+          echo "Copying realms-secrets..."
+          cp /secrets/* /realms
+      volumeMounts:
+      - name: themes-catenax-shared
+        mountPath: "/themes-catenax-shared"
+      - name: themes-catenax-shared-portal
+        mountPath: "/themes-catenax-shared-portal"
+      - name: realms
+        mountPath: "/realms"
+      - name: realm-secrets
+        mountPath: "/secrets"
   ingress:
     enabled: true
     ingressClassName: nginx
@@ -47,3 +92,10 @@ secrets:
         replicationPassword: "<path:portal/data/dev/iam/sharedidp-postgres#replication-password>"
   realmuser:
     enabled: false
+    cxtestaccessuser: "<path:portal/data/iam/sharedidp-user#CX-Test-Access-users-0.json>"
+    company1user: "<path:portal/data/iam/sharedidp-user#Company-1-users-0.json>"
+    company2user: "<path:portal/data/iam/sharedidp-user#Company-2-users-0.json>"
+    securitycompany: "<path:portal/data/iam/sharedidp-user#Security-Company-users-0.json>"
+    cxoperator: "<path:portal/data/iam/sharedidp-user#CX-Operator-users-0.json>"
+    serviceprovider: "<path:portal/data/iam/sharedidp-user#Service-Provider-users-0.json>"
+    appprovider: "<path:portal/data/iam/sharedidp-user#App-Provider-users-0.json>"
