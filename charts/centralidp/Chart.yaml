@@ -25,5 +25,5 @@ version: 1.0.0-RC1
 appVersion: 1.0.0-RC1
 dependencies:
   - name: keycloak
-    repository: https://charts.bitnami.com/bitnami
+    repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
     version: 7.1.18
