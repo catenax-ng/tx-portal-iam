@@ -50,13 +50,13 @@ jobs:
       - name: Update Helm dependencies for centralidp
         run: |
           cd charts/centralidp
-          helm repo add bitnami https://charts.bitnami.com/bitnami
+          helm repo add bitnami-full-index https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
           helm dependency update
 
       - name: Update Helm dependencies for sharedidp
         run: |
           cd charts/sharedidp
-          helm repo add bitnami https://charts.bitnami.com/bitnami
+          helm repo add bitnami-full-index https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
           helm dependency update
 
       - name: Run chart-releaser
