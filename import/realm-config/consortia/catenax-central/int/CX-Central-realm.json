@@ -1521,7 +1521,7 @@
       "technical_roles_management": [
         {
           "id": "4ab4e352-bb16-47d3-a9cf-44730df6737b",
-          "name": "Digital Twin Management",
+          "name": "Connector User",
           "composite": true,
           "composites": {
             "client": {
@@ -1559,7 +1559,7 @@
         },
         {
           "id": "6f153999-e1a9-4cc7-b9c0-f53e7c5f7a42",
-          "name": "Wallet Management",
+          "name": "Identity Wallet Management",
           "composite": true,
           "composites": {
             "client": {
@@ -2296,7 +2296,7 @@
       ],
       "clientRoles": {
         "technical_roles_management": [
-          "Digital Twin Management"
+          "Connector User"
         ]
       },
       "notBefore": 0,
@@ -2322,7 +2322,7 @@
       ],
       "clientRoles": {
         "technical_roles_management": [
-          "Digital Twin Management"
+          "Connector User"
         ]
       },
       "notBefore": 0,
@@ -2348,7 +2348,7 @@
       ],
       "clientRoles": {
         "technical_roles_management": [
-          "Digital Twin Management"
+          "Connector User"
         ]
       },
       "notBefore": 0,
@@ -2374,7 +2374,7 @@
       ],
       "clientRoles": {
         "technical_roles_management": [
-          "Digital Twin Management"
+          "Connector User"
         ]
       },
       "notBefore": 0,
@@ -2400,7 +2400,7 @@
       ],
       "clientRoles": {
         "technical_roles_management": [
-          "Digital Twin Management"
+          "Connector User"
         ]
       },
       "notBefore": 0,
@@ -2426,7 +2426,7 @@
       ],
       "clientRoles": {
         "technical_roles_management": [
-          "Digital Twin Management"
+          "Connector User"
         ]
       },
       "notBefore": 0,
@@ -2452,7 +2452,7 @@
       ],
       "clientRoles": {
         "technical_roles_management": [
-          "Digital Twin Management"
+          "Connector User"
         ]
       },
       "notBefore": 0,
@@ -2563,7 +2563,7 @@
       ],
       "clientRoles": {
         "technical_roles_management": [
-          "Digital Twin Management"
+          "Connector User"
         ],
         "Cl3-CX-Semantic": [
           "delete_semantic_model",
@@ -2594,7 +2594,7 @@
       ],
       "clientRoles": {
         "technical_roles_management": [
-          "Digital Twin Management"
+          "Connector User"
         ]
       },
       "notBefore": 0,
@@ -2743,7 +2743,7 @@
       ],
       "clientRoles": {
         "technical_roles_management": [
-          "Digital Twin Management"
+          "Connector User"
         ],
         "Cl5-CX-Custodian": [
           "view_wallets"
@@ -2793,7 +2793,7 @@
       ],
       "clientRoles": {
         "technical_roles_management": [
-          "Digital Twin Management"
+          "Connector User"
         ]
       },
       "notBefore": 0,
@@ -2874,7 +2874,7 @@
       ],
       "clientRoles": {
         "technical_roles_management": [
-          "Digital Twin Management"
+          "Connector User"
         ],
         "Cl4-CX-DigitalTwin": [
           "add_digital_twin",
@@ -2910,7 +2910,7 @@
       ],
       "clientRoles": {
         "technical_roles_management": [
-          "Digital Twin Management"
+          "Connector User"
         ],
         "Cl4-CX-DigitalTwin": [
           "add_digital_twin",
@@ -2948,7 +2948,7 @@
       ],
       "clientRoles": {
         "technical_roles_management": [
-          "Digital Twin Management"
+          "Connector User"
         ]
       },
       "notBefore": 0,
@@ -3006,7 +3006,7 @@
       ],
       "clientRoles": {
         "technical_roles_management": [
-          "Digital Twin Management"
+          "Connector User"
         ],
         "Cl4-CX-DigitalTwin": [
           "add_digital_twin",
@@ -3073,7 +3073,7 @@
       ],
       "clientRoles": {
         "technical_roles_management": [
-          "Digital Twin Management"
+          "Connector User"
         ],
         "Cl3-CX-Semantic": [
           "view_semantic_model"
@@ -3123,7 +3123,7 @@
       ],
       "clientRoles": {
         "technical_roles_management": [
-          "Digital Twin Management"
+          "Connector User"
         ],
         "Cl4-CX-DigitalTwin": [
           "add_digital_twin",
@@ -3155,7 +3155,7 @@
       ],
       "clientRoles": {
         "technical_roles_management": [
-          "Digital Twin Management"
+          "Connector User"
         ],
         "Cl4-CX-DigitalTwin": [
           "add_digital_twin",
@@ -3191,7 +3191,7 @@
       ],
       "clientRoles": {
         "technical_roles_management": [
-          "Digital Twin Management"
+          "Connector User"
         ],
         "Cl4-CX-DigitalTwin": [
           "add_digital_twin",
@@ -3290,7 +3290,7 @@
       ],
       "clientRoles": {
         "technical_roles_management": [
-          "Digital Twin Management",
+          "Connector User",
           "App Tech User"
         ]
       },
@@ -3317,7 +3317,7 @@
       ],
       "clientRoles": {
         "technical_roles_management": [
-          "Digital Twin Management",
+          "Connector User",
           "App Tech User"
         ]
       },
@@ -3344,7 +3344,7 @@
       ],
       "clientRoles": {
         "technical_roles_management": [
-          "Digital Twin Management"
+          "Connector User"
         ]
       },
       "notBefore": 0,
@@ -3370,7 +3370,7 @@
       ],
       "clientRoles": {
         "technical_roles_management": [
-          "Digital Twin Management",
+          "Connector User",
           "App Tech User"
         ]
       },
@@ -3397,7 +3397,7 @@
       ],
       "clientRoles": {
         "technical_roles_management": [
-          "Digital Twin Management",
+          "Connector User",
           "App Tech User"
         ]
       },
@@ -3424,7 +3424,7 @@
       ],
       "clientRoles": {
         "technical_roles_management": [
-          "Digital Twin Management"
+          "Connector User"
         ]
       },
       "notBefore": 0,
@@ -3471,7 +3471,7 @@
       ],
       "clientRoles": {
         "technical_roles_management": [
-          "Digital Twin Management"
+          "Connector User"
         ]
       },
       "notBefore": 0,
@@ -3492,7 +3492,7 @@
       ],
       "clientRoles": {
         "technical_roles_management": [
-          "Digital Twin Management"
+          "Connector User"
         ]
       },
       "notBefore": 0,
@@ -3518,7 +3518,7 @@
       ],
       "clientRoles": {
         "technical_roles_management": [
-          "Digital Twin Management"
+          "Connector User"
         ]
       },
       "notBefore": 0,
@@ -3544,7 +3544,7 @@
       ],
       "clientRoles": {
         "technical_roles_management": [
-          "Digital Twin Management"
+          "Connector User"
         ]
       },
       "notBefore": 0,
@@ -3573,7 +3573,7 @@
           "view_company_data"
         ],
         "technical_roles_management": [
-          "Digital Twin Management"
+          "Connector User"
         ],
         "Cl3-CX-Semantic": [
           "view_semantic_model"
