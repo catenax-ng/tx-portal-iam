@@ -9,7 +9,7 @@ spec:
   source:
     path: charts/sharedidp
     repoURL: 'https://github.com/catenax-ng/tx-portal-iam.git'
-    targetRevision: sharedidp-1.0.0-RC1
+    targetRevision: sharedidp-1.0.0-RC2
     plugin:
       name: argocd-vault-plugin-helm-args
       env:
