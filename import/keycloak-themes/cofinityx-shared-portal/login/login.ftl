@@ -39,6 +39,10 @@
                                 <p>
                                     ${msg("sub-header")}
                                 </p>
+                                <p><#if userError??>
+                                        ${userError}
+                                   </#if>
+                                 </p>
                             </div>
 
                             <div>
@@ -70,8 +74,10 @@
                                         name="username"
                                         type="text"
                                         autofocus
-                                        required
                                     />
+                                    <#if emailError??>
+                                        ${emailError}
+                                   </#if>
                                 </div>
                             
                                 <div class="form-control">
@@ -84,8 +90,10 @@
                                         name="password"
                                         type="password"
                                         autofocus
-                                        required
                                         />
+                                        <#if pwdError??>
+                                            ${pwdError}
+                                        </#if>
                                     <#--  </div>  -->
                                 </div>
 
