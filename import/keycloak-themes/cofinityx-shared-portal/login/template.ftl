@@ -115,7 +115,7 @@
             >
           </div>
         </nav>
-        <span class="copyright">Copyright © Catena-X Automotive Network</span>
+        <span class="copyright">Copyright © Cofinity-X GmbH - All rights reserved.</span>
       </div>
     </div>
     <script>
