@@ -1,0 +1,317 @@
+/********************************************************************************
+ * Copyright (c) 2021-2023 Contributors to the Eclipse Foundation
+ *
+ * See the NOTICE file(s) distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Apache License, Version 2.0 which is available at
+ * https://www.apache.org/licenses/LICENSE-2.0.
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations
+ * under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ ********************************************************************************/
+
+@import "../fonts/calibri-font/stylesheet.css";
+@import "../fonts/karbon/stylesheet.css";
+
+h4,
+p {
+  margin: 0;
+}
+
+/* Responsive support start */
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Karbon", sans-serif;
+  font-size: 1.4rem;
+  background-color: #fafafa;
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 6px;
+  }
+}
+
+/* Responsive support ends  */
+
+.signup-container {
+  /* background-image: url("../images/background.svg"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  background-position-y: -8%;
+  height: 100vh;
+  width: 100%;
+}
+
+.signup-container__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+}
+
+.signup-container__header ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.signup-container__header ul li {
+  width: 4rem;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+.signup-container__header ul li a {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.signup-container__header ul li a.active {
+  color: #000;
+}
+
+.signup-container__body-parent {
+  height: calc(100vh - 7rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.signup-container__body-image-container {
+  display: flex;
+  position: relative;
+}
+
+.union-logo {
+  background-image: url("./../images/union.svg");
+  height: 86.3rem;
+  background-repeat: no-repeat;
+  background-size: 145% 120%;
+  background-position-x: -194px;
+  width: 40rem;
+}
+
+.union-logo-white {
+  background-image: url("./../images/union-white.svg");
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 127% 113%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  background-position-x: -284px;
+}
+
+.signup-container__body-image-container .user-icon {
+  width: 36.5rem;
+  position: relative;
+  top: 4.1rem;
+  left: -7.2rem;
+}
+
+.signup-container__body {
+  width: 50rem;
+  margin: 0 auto;
+  padding: 6rem 4rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  overflow-y: auto;
+  max-height: calc(100vh - 12rem);
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 1px 1px 25px #00000033;
+  border-radius: 1.6rem;
+  opacity: 1;
+  box-sizing: border-box;
+}
+
+.signup-container__body--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.signup-container__body h4 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.86;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.signup-container__body p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+  margin-bottom: 8rem;
+}
+
+.form-control {
+  height: 8rem;
+}
+
+.signup-container__body label {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #afafaf;
+}
+
+.signup-container__body input {
+  font-family: "Karbon", sans-serif;
+  width: 100%;
+  height: 2.5rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  color: #000000;
+  background-color: #fff;
+  padding: 0.5 1rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.22;
+}
+
+.signup-container__body input:focus {
+  border-bottom: solid 1px #d31184;
+}
+
+.signup-container__body .user-icon {
+  height: 3.5rem;
+  width: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+.signup-container__footer {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 8rem;
+}
+
+.signup-container__footer nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.signup-container__footer nav div {
+  margin: 0 1rem;
+  display: inline-block;
+}
+
+.signup-container__footer nav div a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: left;
+  color: #4d4d4d;
+}
+
+.signup-container__footer span {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: left;
+  color: #4d4d4d;
+}
+
+.relative-position {
+  position: relative;
+  padding-right: 4rem;
+}
+
+.relative-position a {
+  position: absolute;
+  cursor: pointer;
+  right: -1rem;
+  top: 0.7rem;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.relative-position .note {
+  color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  left: 0;
+  font-size: 1rem;
+  top: 4rem;
+}
+
+.form-control-button {
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.form-control-button button {
+  border-radius: 0.5rem;
+  background-color: #000000;
+  cursor: pointer;
+  padding: 1.4rem 2.4rem;
+  text-align: left;
+  color: #fff;
+  border: none;
+  font-size: 1.4rem;
+}
+
+.gray-bg {
+  background-color: #ecf0f4;
+  width: 100% !important;
+  border-radius: 0 0 3rem 3rem;
+}
+
+.gray-bg p {
+  font-size: 1.3rem;
+  padding: 1rem 0;
+  position: relative;
+  top: 2rem;
+  margin-bottom: 5rem;
+}
+
+/* Placeholder property  */
+::-webkit-input-placeholder {
+  font-size: 1.7rem;
+  color: #4d4d4f;
+}
+
+:-ms-input-placeholder {
+  font-size: 1.7rem;
+  color: #4d4d4f;
+}
+
+::placeholder {
+  font-size: 1.7rem;
+  color: #4d4d4f;
+}
