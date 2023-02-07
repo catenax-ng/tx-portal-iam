@@ -1,0 +1,36 @@
+<svg id="Group_1073" data-name="Group 1073" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="66.512" height="73.416" viewBox="0 0 66.512 73.416">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#a5ce3a" stop-opacity="0"/>
+      <stop offset="1" stop-color="#a5ce3a"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#a5ce3a"/>
+      <stop offset="1" stop-color="#a5ce3a" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="1" y1="0.5" x2="0.011" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#a5ce3a"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="0.978" y1="0.548" x2="0" y2="0.548" xlink:href="#linear-gradient-2"/>
+    <linearGradient id="linear-gradient-5" x1="0" y1="0.5" x2="1" y2="0.474" xlink:href="#linear-gradient-2"/>
+    <linearGradient id="linear-gradient-6" x1="1" y1="0.516" x2="0" y2="0.5" xlink:href="#linear-gradient-2"/>
+    <linearGradient id="linear-gradient-7" x1="0.986" y1="0.5" x2="0" y2="0.5" xlink:href="#linear-gradient-2"/>
+  </defs>
+  <path id="Rectangle_140" d="M6.183,83.479h0A6.183,6.183,0,0,1,0,77.3V42.943A6.183,6.183,0,0,1,6.183,36.76h0a6.183,6.183,0,0,1,6.183,6.183V77.3A6.183,6.183,0,0,1,6.183,83.479Z" transform="translate(0.256 -10.063)" opacity="0.8" fill="url(#linear-gradient)"/>
+  <path id="Rectangle_140-2" d="M82.153,36.76h0a6.183,6.183,0,0,1,6.183,6.183V77.3a6.183,6.183,0,0,1-6.183,6.183h0A6.183,6.183,0,0,1,75.97,77.3V42.943A6.183,6.183,0,0,1,82.153,36.76Z" transform="translate(-21.83 -10.063)" opacity="0.8" fill="url(#linear-gradient-2)"/>
+  <circle id="Ellipse_11" cx="6.183" cy="6.183" r="6.183" transform="translate(54.147 61.051)" fill="#a5ce3a"/>
+  <rect id="Rectangle_267" data-name="Rectangle 267" width="66.249" height="12.365" rx="6.183" transform="translate(0.256 25.864)" opacity="0.8" fill="url(#linear-gradient-3)"/>
+  <circle id="Ellipse_10" cx="6.183" cy="6.183" r="6.183" transform="translate(54.14 25.857)" fill="#a5ce3a"/>
+  <ellipse id="Ellipse_10-2" cx="6.512" cy="5.426" rx="6.512" ry="5.426" transform="translate(0 26.542)" fill="#a5ce3a"/>
+  <rect id="Rectangle_268" data-name="Rectangle 268" width="37.597" height="12.365" rx="6.183" transform="translate(26.529 0.021) rotate(90)" opacity="0.8" fill="url(#linear-gradient-4)"/>
+  <rect id="Rectangle_269" data-name="Rectangle 269" width="37.597" height="12.365" rx="6.183" transform="translate(52.598 0.021) rotate(90)" opacity="0.8" fill="url(#linear-gradient-5)"/>
+  <circle id="Ellipse_10-3" cx="6.183" cy="6.183" r="6.183" transform="translate(14.164 25.857)" fill="#a5ce3a"/>
+  <circle id="Ellipse_10-4" cx="6.183" cy="6.183" r="6.183" transform="translate(40.24 25.857)" fill="#a5ce3a"/>
+  <rect id="Rectangle_270" data-name="Rectangle 270" width="39.293" height="12.365" rx="6.183" transform="translate(53.014 12.365) rotate(180)" opacity="0.8" fill="url(#linear-gradient-6)"/>
+  <circle id="Ellipse_10-5" cx="6.183" cy="6.183" r="6.183" transform="translate(40.24)" fill="#a5ce3a"/>
+  <rect id="Rectangle_271" data-name="Rectangle 271" width="66.249" height="12.365" rx="6.183" transform="translate(0.256 61.051)" opacity="0.8" fill="url(#linear-gradient-7)"/>
+  <circle id="Ellipse_10-6" cx="6.183" cy="6.183" r="6.183" transform="translate(54.14 61.044)" fill="#a5ce3a"/>
+  <ellipse id="Ellipse_10-7" cx="6.512" cy="5.426" rx="6.512" ry="5.426" transform="translate(0 62.102)" fill="#a5ce3a"/>
+  <circle id="Ellipse_10-8" cx="6.183" cy="6.183" r="6.183" transform="translate(14.164)" fill="#a5ce3a"/>
+</svg>

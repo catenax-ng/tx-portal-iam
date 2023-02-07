@@ -1,0 +1,302 @@
+/********************************************************************************
+ * Copyright (c) 2021-2023 Contributors to the Eclipse Foundation
+ *
+ * See the NOTICE file(s) distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Apache License, Version 2.0 which is available at
+ * https://www.apache.org/licenses/LICENSE-2.0.
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations
+ * under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ ********************************************************************************/
+
+@import "../fonts/calibri-font/stylesheet.css";
+@import "../fonts/karbon/stylesheet.css";
+@import "./variables.css";
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 6px;
+  }
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Karbon", sans-serif;
+  font-size: 1.4rem;
+  background-color: var(--body-bg-color);
+}
+
+h4,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Karbon", sans-serif;
+}
+
+.signup-container {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+}
+
+.signup-container__body-parent {
+  height: calc(100vh - 7rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.signup-container__body-image-container {
+  display: flex;
+  position: relative;
+}
+
+.union-logo {
+  background-image: url("./../images/union.svg");
+  height: 86.3rem;
+  background-repeat: no-repeat;
+  background-size: 145% 120%;
+  background-position-x: -194px;
+  width: 40rem;
+}
+
+.union-logo-white {
+  background-image: url("./../images/union-white.svg");
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 127% 113%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  background-position-x: -284px;
+}
+
+.signup-container__body-image-container .user-icon {
+  width: 36.5rem;
+  position: relative;
+  top: 4.1rem;
+  left: -7.2rem;
+}
+
+.signup-container__body {
+  background: var(--white-color) 0% 0% no-repeat padding-box;
+  width: 61.3rem;
+  margin: 0 auto;
+  padding: 8.4rem 6.6rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  overflow-y: auto;
+  max-height: calc(100vh - 12rem);
+  box-shadow: 1px 1px 25px #00000033;
+  border-radius: 1.6rem;
+  opacity: 1;
+  box-sizing: border-box;
+}
+
+.signup-container__body--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 8rem;
+}
+
+.signup-container__body h4 {
+  color: var(--black-color);
+  font-size: 2.8rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.86;
+  letter-spacing: normal;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.signup-container__body p {
+  color: var(--black-color);
+  font-size: 1.9rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.form-control {
+  height: 8rem;
+}
+
+.signup-container__body label {
+  color: var(--gray-color-3);
+  display: block;
+  font-size: 1.7rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  margin: 3.9rem 0 1rem 0;
+}
+
+.signup-container__body input {
+  background-color: var(--white-color);
+  font-family: "Karbon", sans-serif;
+  width: 100%;
+  height: 2.5rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  color: var(--black-color);
+  padding: 0.5 1rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.22;
+}
+
+.signup-container__body input:focus {
+  border-bottom: solid 1px var(--pink-color);
+}
+
+.signup-container__body .user-icon {
+  height: 3.5rem;
+  width: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+.signup-container__footer {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 8rem;
+}
+
+.signup-container__footer nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.signup-container__footer nav div {
+  margin: 0 1rem;
+  display: inline-block;
+}
+
+.signup-container__footer nav div a {
+  color: var(--gray-color-1);
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.signup-container__footer span {
+  color: var(--gray-color-1);
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.form-control-button {
+  text-align: left;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-control-button a {
+  color: var(--black-color);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: normal;
+  text-align: left;
+  cursor: pointer;
+}
+
+.form-control-button button {
+  background-color: var(--black-color);
+  color: var(--white-color);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 1.2rem 2.4rem 1.4rem 2.4rem;
+  border: none;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.06;
+  text-align: center;
+}
+
+.gray-bg {
+  background-color: var(--gray-color-2);
+  width: 100% !important;
+  border-radius: 0 0 3rem 3rem;
+}
+
+.gray-bg p {
+  font-size: 1.3rem;
+  padding: 1rem 0;
+  position: relative;
+  top: 2rem;
+  margin-bottom: 5rem;
+}
+
+/* Placeholder property  */
+::-webkit-input-placeholder {
+  font-size: 1.7rem;
+  color: var(--gray-color);
+}
+
+:-ms-input-placeholder {
+  font-size: 1.7rem;
+  color: var(--gray-color);
+}
+
+::placeholder {
+  font-size: 1.7rem;
+  color: var(--gray-color);
+}
+
+@media screen and (max-width: 1280px) and (max-width: 1400px) {
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .signup-container__body-image-container .user-icon {
+    width: 22.5rem;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+}
+
+@media screen and (max-width: 600px) {
+}
