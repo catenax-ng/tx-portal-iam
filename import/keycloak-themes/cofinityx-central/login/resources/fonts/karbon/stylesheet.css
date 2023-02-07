@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'Karbon';
+    src: url('Karbon-Semibold.eot');
+    src: url('Karbon-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('Karbon-Semibold.woff2') format('woff2'),
+        url('Karbon-Semibold.woff') format('woff'),
+        url('Karbon-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karbon';
+    src: url('Karbon-MediumItalic.eot');
+    src: url('Karbon-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('Karbon-MediumItalic.woff2') format('woff2'),
+        url('Karbon-MediumItalic.woff') format('woff'),
+        url('Karbon-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karbon';
+    src: url('Karbon-Thin.eot');
+    src: url('Karbon-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Karbon-Thin.woff2') format('woff2'),
+        url('Karbon-Thin.woff') format('woff'),
+        url('Karbon-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karbon';
+    src: url('Karbon-SemiboldItalic.eot');
+    src: url('Karbon-SemiboldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Karbon-SemiboldItalic.woff2') format('woff2'),
+        url('Karbon-SemiboldItalic.woff') format('woff'),
+        url('Karbon-SemiboldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karbon';
+    src: url('Karbon-Medium.eot');
+    src: url('Karbon-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Karbon-Medium.woff2') format('woff2'),
+        url('Karbon-Medium.woff') format('woff'),
+        url('Karbon-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karbon';
+    src: url('Karbon-Regular.eot');
+    src: url('Karbon-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Karbon-Regular.woff2') format('woff2'),
+        url('Karbon-Regular.woff') format('woff'),
+        url('Karbon-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karbon';
+    src: url('Karbon-BoldItalic.eot');
+    src: url('Karbon-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Karbon-BoldItalic.woff2') format('woff2'),
+        url('Karbon-BoldItalic.woff') format('woff'),
+        url('Karbon-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karbon';
+    src: url('Karbon-ThinItalic.eot');
+    src: url('Karbon-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('Karbon-ThinItalic.woff2') format('woff2'),
+        url('Karbon-ThinItalic.woff') format('woff'),
+        url('Karbon-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karbon';
+    src: url('Karbon-LightItalic.eot');
+    src: url('Karbon-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Karbon-LightItalic.woff2') format('woff2'),
+        url('Karbon-LightItalic.woff') format('woff'),
+        url('Karbon-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karbon';
+    src: url('Karbon-Light.eot');
+    src: url('Karbon-Light.eot?#iefix') format('embedded-opentype'),
+        url('Karbon-Light.woff2') format('woff2'),
+        url('Karbon-Light.woff') format('woff'),
+        url('Karbon-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karbon';
+    src: url('Karbon-Bold.eot');
+    src: url('Karbon-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Karbon-Bold.woff2') format('woff2'),
+        url('Karbon-Bold.woff') format('woff'),
+        url('Karbon-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karbon Regular';
+    src: url('Karbon-RegularItalic.eot');
+    src: url('Karbon-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('Karbon-RegularItalic.woff2') format('woff2'),
+        url('Karbon-RegularItalic.woff') format('woff'),
+        url('Karbon-RegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
