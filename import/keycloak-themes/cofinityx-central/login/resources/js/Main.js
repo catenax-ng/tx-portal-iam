@@ -121,7 +121,6 @@ class SearchInput extends Viewable {
   }
 
   clearError() {
-    console.log('called');
     document.querySelector('.search-error')?.remove();
     return this;
   }
@@ -217,6 +216,8 @@ class Page extends Viewable {
   constructor() {
     super();
     this.view = document.body;
+    this.view.appendChild(N('div', null, { class: 'right-image' }));
+    this.view.appendChild(N('div', null, { class: 'left-image' }));
   }
 }
 

@@ -21,26 +21,58 @@
 @import '../fonts/calibri-font/stylesheet.css';
 @import '../fonts/karbon/stylesheet.css';
 
+@import './variable.css';
+
 /* Basic Styles */
 * {
   margin: 0px;
   padding: 0px;
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
-  height: 100vh;
-  width: 100vw;
   font-family: 'Karbon', sans-serif;
+  font-size: 1.4rem;
+  position: relative;
+}
+
+.right-image {
+  background-image: url(../images/right_image.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 21%;
+  height: 360px;
+  right: 0;
+  top: 135px;
+  background-position: right;
+  background-position-y: top;
+  background-size: 80% 319px;
+}
+
+.left-image {
+  background-image: url(../images/left_image.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 21%;
+  height: 360px;
+  left: 0;
+  bottom: 15px;
+  background-position: bottom;
+  background-position-x: left;
+  background-size: 80% 319px;
 }
 
 /* Logo styles */
 
 .logo_container {
-  height: 8rem;
+  height: 12.8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fafafa;
+  background-color: var(--bg-color-1);
   background-image: url('../images/background_header.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -48,13 +80,13 @@ body {
 }
 
 .logo_container_left {
-  width: 12rem;
-  height: 4rem;
-  padding-left: 2.5rem;
+  width: 19.2rem;
+  height: 6.4rem;
+  padding-left: 4rem; /* 40px */
 }
 
 .logo_container_right {
-  width: 12rem;
+  width: 19.2rem; /* 192px */
   height: 100%;
 }
 
@@ -69,59 +101,59 @@ body {
   background-image: url('../images/union.svg');
   background-repeat: no-repeat;
   background-size: 135% 156%;
-  background-position-y: -4.5rem;
+  background-position-y: -7.2rem;
   height: 100%;
 }
 
 /* Title styles */
 
 .title {
-  margin-top: 1rem;
+  margin-top: 1.6rem;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 4rem;
   font-weight: 600;
 }
 
 .title_search {
-  color: #fdb913;
+  color: var(--yellow-color);
 }
 
 .title_and {
   display: inline-block;
-  margin: 0 0.7rem;
+  margin: 0 1.2rem;
 }
 
 .title_select {
-  color: #d31184;
+  color: var(--pink-color);
 }
 
 .subtitle {
-  font-size: 2.5rem;
+  font-size: 4rem;
   text-align: center;
   font-weight: 600;
-  margin-bottom: 3rem;
+  margin-bottom: 4.8rem;
 }
 
 /* Search Container */
 
 .search {
-  width: 50rem;
+  width: 80rem;
   border-radius: 33px;
-  color: #4d4d4f;
-  padding: 0.7rem;
-  padding-left: 2.5rem;
-  font-size: 20px;
+  color: var(--grey-color);
+  padding: 1.2rem;
+  padding-left: 4rem;
+  font-size: 2rem;
   background-image: url('../images/search.svg');
   background-repeat: no-repeat;
   background-position: 15px 15px;
   background-size: 15px 15px;
   font-family: inherit;
   font-weight: 400;
-  border: 1px solid #ededee;
+  border: 1px solid var(--border-color);
 }
 
 .search::placeholder {
-  color: #4d4d4f;
+  color: var(--grey-color);
   font-size: 20px;
   font-family: inherit;
 }
@@ -134,27 +166,29 @@ body {
 }
 
 .search-container {
-  color: #4d4d4f;
+  color: var(--grey-color);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  height: 6.4rem;
 }
 
 .search-error {
-  width: 45rem;
-  color: #ff6a6a;
+  width: 72rem;
+  color: var(--orange-color);
+  font-size: 1.6rem;
 }
 
 /* Error container */
 
 .error-container {
-  margin-top: 2rem;
+  margin-top: 3.2rem;
   text-align: center;
 }
 
 .error-main {
-  font-size: 1.25rem;
+  font-size: 2rem;
   font-weight: 500;
   margin: 0;
 }
@@ -162,7 +196,7 @@ body {
 /* Company list grid */
 
 .grid_main {
-  min-height: calc(100vh - 420px);
+  min-height: calc(100vh - 437px);
 }
 
 ul {
@@ -174,7 +208,7 @@ ul {
   padding-inline-start: 0;
   margin-block-start: 0;
   margin-block-end: 0;
-  margin: 2rem;
+  margin: 3.2rem 3.2rem 0 3.2rem;
 }
 
 ul > li {
@@ -184,8 +218,8 @@ ul > li {
   transform: scale(0.9);
   box-shadow: 1px 1px 12px #0000001a;
   border-radius: 18px;
-  width: 220px;
-  height: 200px;
+  width: 22rem;
+  height: 20rem;
 }
 
 ul > li:hover {
@@ -195,7 +229,7 @@ ul > li:hover {
 ul > li > a {
   height: 100%;
   text-decoration: none;
-  color: black;
+  color: var(--black-color);
   border-radius: 18px;
   display: flex;
   flex-direction: column;
@@ -207,7 +241,7 @@ ul > li > a {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1Mi40IDU1LjczIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2EwYTBhMDt9LmNscy0ye2ZpbGw6I2EwYTBhMDt9PC9zdHlsZT48L2RlZnM+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNNDAsMjguNjl2LTZhMSwxLDAsMCwwLTEuNTUtLjgyTDE0LjY5LDM4LjMxYTQuMTEsNC4xMSwwLDAsMS02LjQ1LTMuMzhWMjdhOC4yMyw4LjIzLDAsMCwxLDMuNTUtNi43Nmw3LjA4LTQuODlBNC4wNyw0LjA3LDAsMCwwLDIwLjYzLDEyVjYuMzhsMC01LjM5QTEsMSwwLDAsMCwxOS4xLjE4bC01LDMuNDJBNC4wOCw0LjA4LDAsMCwwLDEyLjM4LDdWOS44NEw2LjMsMTRBMTQuNTcsMTQuNTcsMCwwLDAsMCwyNnY4Ljg5QTEyLjM2LDEyLjM2LDAsMCwwLDE5LjM4LDQ1LjA5bDE4LjktMTNBNC4wOSw0LjA5LDAsMCwwLDQwLDI4LjY5WiIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTMzLDEwLjYzbC0xOC45LDEzQTQuMDksNC4wOSwwLDAsMCwxMi4zNSwyN3Y2YTEsMSwwLDAsMCwxLjU1LjgxTDM3LjcxLDE3LjQxYTQuMTEsNC4xMSwwLDAsMSw2LjQ0LDMuMzh2Ny45YTguMjUsOC4yNSwwLDAsMS0zLjU1LDYuNzdsLTYuMzMsNC4zNi0uNzIuNWgwYTQuMDYsNC4wNiwwLDAsMC0xLjc1LDMuMzRWNDUuMmwwLDkuNDhhMSwxLDAsMCwwLDEuNTUuODFsNS0zLjQzQTQuMDUsNC4wNSwwLDAsMCw0MCw0OC43MlY0NS44N2w2LjA2LTQuMThhMTQuNTgsMTQuNTgsMCwwLDAsNi4yOS0xMlYyMC44QTEyLjM1LDEyLjM1LDAsMCwwLDMzLDEwLjYzWiIvPjwvc3ZnPg==);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50px 50px;
+  background-size: 5rem 5rem;
   border-top-left-radius: 18px;
   border-top-right-radius: 18px;
 }
@@ -215,10 +249,10 @@ ul > li > a {
 .idp-name {
   flex-basis: 40%;
   text-align: center;
-  padding-top: 2rem;
-  color: #4d4d4f;
-  background-color: #fafafa;
-  font-size: 1rem;
+  padding-top: 3.2rem;
+  color: var(--grey-color);
+  background-color: var(--bg-color-1);
+  font-size: 1.6rem;
   font-weight: 500;
   border-bottom-left-radius: 18px;
   border-bottom-right-radius: 18px;
@@ -226,12 +260,12 @@ ul > li > a {
 
 /* Footer */
 footer {
-  background-color: #fafafa;
+  background-color: var(--bg-color-1);
   text-align: center;
   font-weight: 500;
   position: absolute;
   width: 100%;
-  height: 4rem;
+  height: 6.4rem;
   background-image: url('../images/footer_background.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -239,6 +273,6 @@ footer {
 }
 
 .copy {
-  margin-top: 1.5rem;
-  font-size: 1rem;
+  margin-top: 2.4rem;
+  font-size: 1.6rem;
 }
