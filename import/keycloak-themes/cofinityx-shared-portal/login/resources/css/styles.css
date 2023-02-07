@@ -127,9 +127,9 @@ body {
 }
 
 .signup-container__body {
-  width: 50rem;
+  width: 61.3rem;
   margin: 0 auto;
-  padding: 6rem 4rem;
+  padding: 8.4rem 6.6rem;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -145,11 +145,12 @@ body {
 .signup-container__body--header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-end;
+  margin-bottom: 8rem;
 }
 
 .signup-container__body h4 {
-  font-size: 2.6rem;
+  font-size: 2.8rem;
   font-weight: 600;
   font-stretch: normal;
   font-style: normal;
@@ -161,7 +162,7 @@ body {
 }
 
 .signup-container__body p {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
@@ -169,7 +170,6 @@ body {
   letter-spacing: normal;
   text-align: left;
   color: #000;
-  margin-bottom: 8rem;
 }
 
 .form-control {
@@ -178,12 +178,13 @@ body {
 
 .signup-container__body label {
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
   letter-spacing: normal;
   color: #afafaf;
+  margin: 3.9rem 0 1rem 0;
 }
 
 .signup-container__body input {
@@ -330,4 +331,31 @@ body {
 ::placeholder {
   font-size: 1.7rem;
   color: #4d4d4f;
+}
+
+@media screen and (max-width: 1280px) and (max-width: 1400px) {
+  html {
+    /* font-size: 6px; */
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  html {
+    /* font-size: 6px; */
+  }
+  .signup-container__body-image-container .user-icon {
+    width: 22.5rem;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  html {
+    /* font-size: 6px; */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    /* font-size: 6px; */
+  }
 }

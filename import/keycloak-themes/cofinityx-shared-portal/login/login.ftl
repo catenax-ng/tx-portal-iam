@@ -46,7 +46,7 @@
                             </div>
 
                             <div>
-                                <img src="${url.resourcesPath}/images/lock.svg" width="39" alt="" />
+                                <img src="${url.resourcesPath}/images/lock.svg" width="73" height="66" alt="" />
                             </div>
                         </div>
 
@@ -117,10 +117,10 @@
                             </div>
                         </#if>
                     </div>
-                <div>
-                </#if>   
                 </div>
-                </div> 
+                </#if>   
+            </div>
+        </div> 
     </#if>
 
 </@layout.registrationLayout>
