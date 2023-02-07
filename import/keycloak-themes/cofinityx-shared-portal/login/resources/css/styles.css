@@ -273,6 +273,19 @@ body {
 .form-control-button {
   text-align: left;
   margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-control-button a {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+  cursor: pointer;
 }
 
 .form-control-button button {

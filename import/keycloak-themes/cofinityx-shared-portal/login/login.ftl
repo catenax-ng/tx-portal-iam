@@ -98,8 +98,13 @@
                                 </div>
 
                                 <div class="form-control-button">
-                                    <input type="hidden" id="id-hidden-input" name="credentialId" <#if auth.selectedCredential?has_content>value="${auth.selectedCredential}"</#if>/>
-                                    <button name="login" type="submit" id="kc-login">${msg("login")}</button>
+                                    <div>
+                                        <input type="hidden" id="id-hidden-input" name="credentialId" <#if auth.selectedCredential?has_content>value="${auth.selectedCredential}"</#if>/>
+                                        <button name="login" type="submit" id="kc-login">${msg("login")}</button>
+                                    </div>
+                                    <div>
+                                        <a>Forgot password?</a>
+                                    </div>
                                 </div>
                             </form>
                         </div>
