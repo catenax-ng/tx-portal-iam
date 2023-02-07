@@ -82,7 +82,6 @@
                             
                                 <div class="form-control">
                                     <label>Password *</label>
-                                    <#--  <div class="relative-position">  -->
                                         <input
                                         autocomplete="off"
                                         placeholder="Enter password"
@@ -94,7 +93,6 @@
                                         <#if pwdError??>
                                             ${pwdError}
                                         </#if>
-                                    <#--  </div>  -->
                                 </div>
 
                                 <div class="form-control-button">
