@@ -270,6 +270,12 @@ p {
   margin-bottom: 5rem;
 }
 
+.error-msg {
+  font-size: 1.6rem;
+  color: var(--error-color);
+  font-weight: 500;
+}
+
 /* Placeholder property  */
 ::-webkit-input-placeholder {
   font-size: 1.7rem;
