@@ -67,16 +67,20 @@ body {
 
 /* Logo styles */
 
-.logo_container {
+header {
   height: 12.8rem;
+  background-color: var(--bg-color-1);
+  background-image: url('../images/background_header.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.logo_container {
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--bg-color-1);
-  background-image: url('../images/background_header.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .logo_container_left {
@@ -195,7 +199,7 @@ body {
 
 /* Company list grid */
 
-.grid_main {
+.grid-main {
   min-height: calc(100vh - 437px);
 }
 
@@ -238,7 +242,7 @@ ul > li > a {
 .idp-main {
   flex-basis: 60%;
   text-align: center;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1Mi40IDU1LjczIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2EwYTBhMDt9LmNscy0ye2ZpbGw6I2EwYTBhMDt9PC9zdHlsZT48L2RlZnM+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNNDAsMjguNjl2LTZhMSwxLDAsMCwwLTEuNTUtLjgyTDE0LjY5LDM4LjMxYTQuMTEsNC4xMSwwLDAsMS02LjQ1LTMuMzhWMjdhOC4yMyw4LjIzLDAsMCwxLDMuNTUtNi43Nmw3LjA4LTQuODlBNC4wNyw0LjA3LDAsMCwwLDIwLjYzLDEyVjYuMzhsMC01LjM5QTEsMSwwLDAsMCwxOS4xLjE4bC01LDMuNDJBNC4wOCw0LjA4LDAsMCwwLDEyLjM4LDdWOS44NEw2LjMsMTRBMTQuNTcsMTQuNTcsMCwwLDAsMCwyNnY4Ljg5QTEyLjM2LDEyLjM2LDAsMCwwLDE5LjM4LDQ1LjA5bDE4LjktMTNBNC4wOSw0LjA5LDAsMCwwLDQwLDI4LjY5WiIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTMzLDEwLjYzbC0xOC45LDEzQTQuMDksNC4wOSwwLDAsMCwxMi4zNSwyN3Y2YTEsMSwwLDAsMCwxLjU1LjgxTDM3LjcxLDE3LjQxYTQuMTEsNC4xMSwwLDAsMSw2LjQ0LDMuMzh2Ny45YTguMjUsOC4yNSwwLDAsMS0zLjU1LDYuNzdsLTYuMzMsNC4zNi0uNzIuNWgwYTQuMDYsNC4wNiwwLDAsMC0xLjc1LDMuMzRWNDUuMmwwLDkuNDhhMSwxLDAsMCwwLDEuNTUuODFsNS0zLjQzQTQuMDUsNC4wNSwwLDAsMCw0MCw0OC43MlY0NS44N2w2LjA2LTQuMThhMTQuNTgsMTQuNTgsMCwwLDAsNi4yOS0xMlYyMC44QTEyLjM1LDEyLjM1LDAsMCwwLDMzLDEwLjYzWiIvPjwvc3ZnPg==);
+  background-image: url('../images/x_logo.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 5rem 5rem;
