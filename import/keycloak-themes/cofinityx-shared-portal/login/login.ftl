@@ -76,7 +76,7 @@
                                         autofocus
                                     />
                                     <#if emailError??>
-                                        ${emailError}
+                                        <span class="error-msg">${emailError}</span>
                                    </#if>
                                 </div>
                             
@@ -91,7 +91,7 @@
                                         autofocus
                                         />
                                         <#if pwdError??>
-                                            ${pwdError}
+                                            <span class="error-msg">${pwdError}</span>
                                         </#if>
                                 </div>
 
