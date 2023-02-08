@@ -135,7 +135,7 @@ class SelectProvider extends Viewable {
   constructor(providers) {
     super();
     this.providers = providers;
-    this.view = N('div');
+    this.view = N('div', null, { class: 'grid-main' });
   }
 
   displayError() {
@@ -292,7 +292,16 @@ class Footer extends Viewable {
 class Main extends Viewable {
   constructor() {
     super();
-    this.view = N('main', Selector.getView(), { class: 'grid_main' });
+    this.view = N(
+      'main',
+      [
+        Title.getView(),
+        Subtitle.getView(),
+        Search.getView(),
+        Selector.getView(),
+      ],
+      {}
+    );
   }
 }
 
