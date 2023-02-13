@@ -248,14 +248,18 @@ p {
   color: var(--white-color);
   border-radius: 1rem;
   cursor: pointer;
-  padding: 1.2rem 2.4rem 1.4rem 2.4rem;
   border: none;
   font-size: 1.6rem;
   font-weight: 600;
-  line-height: 1.06;
   text-align: center;
   height: 5rem;
   width: 10rem;
+}
+
+.form-control-button button:hover {
+  background-color: var(--white-color);
+  color: var(--black-color);
+  border: 2px solid var(--black-color);
 }
 
 .gray-bg {

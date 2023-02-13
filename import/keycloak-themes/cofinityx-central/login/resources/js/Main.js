@@ -160,7 +160,9 @@ class SelectProvider extends Viewable {
                   N('div', '', {
                     class: `idp-main`,
                   }),
-                  N('div', p.name, { class: 'idp-name' }),
+                  N('div', [N('p', p.name, { class: 'idp-company-name' })], {
+                    class: 'idp-name',
+                  }),
                 ],
                 {
                   href: p.url.match(/^https?:\/\//)
