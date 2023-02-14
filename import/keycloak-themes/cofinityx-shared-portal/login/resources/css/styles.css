@@ -133,6 +133,7 @@ p {
   .signup-container__body {
     padding: 3.4rem 6.6rem;
     transform: scale(0.8);
+    max-height: calc(100vh - 4rem);
   }
 }
 
