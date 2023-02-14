@@ -41,6 +41,18 @@ body {
   background-color: var(--body-bg-color);
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #e7e7e7;
+  border-radius: 5px;
+}
+
 h4,
 p {
   margin: 0;
@@ -115,6 +127,13 @@ p {
   border-radius: 1.6rem;
   opacity: 1;
   box-sizing: border-box;
+}
+
+@media screen and (min-width: 1400px) and (max-width:1800px) {
+  .signup-container__body {
+    padding: 3.4rem 6.6rem;
+    transform: scale(0.8);
+  }
 }
 
 .signup-container__body--header {
