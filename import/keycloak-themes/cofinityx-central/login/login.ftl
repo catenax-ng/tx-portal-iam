@@ -18,10 +18,10 @@
 -->
 
 <#import "template.ftl" as layout>
-<@layout.registrationLayout; section>
-    <#if section = "header">
+<@layout.companylistlayout; section>
+    
 
-<pre id="providers">
+<pre style="display:none" id="providers">
 [
 <#if realm.password && social.providers??>
     <#list social.providers as p>
@@ -36,5 +36,5 @@
 null]
 </pre>
 
-    </#if>
-</@layout.registrationLayout>
+    
+</@layout.companylistlayout>

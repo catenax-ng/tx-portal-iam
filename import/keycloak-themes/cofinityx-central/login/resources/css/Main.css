@@ -50,6 +50,7 @@ body {
   background-position: right;
   background-position-y: top;
   background-size: 80% 319px;
+  z-index: -1;
 }
 
 .left-image {
@@ -63,11 +64,12 @@ body {
   background-position: bottom;
   background-position-x: left;
   background-size: 80% 319px;
+  z-index: -1;
 }
 
 /* Logo styles */
 
-header {
+.header {
   height: 12.8rem;
   background-color: var(--bg-color-1);
   background-image: url('../images/background_header.png');

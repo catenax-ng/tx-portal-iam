@@ -63,8 +63,10 @@ const getSelectedIDP = (providers) => {
     const redURI = params.get('redirect_uri');
     const redParams = new URLSearchParams(redURI.replace(/^[^?]+/, ''));
     const alias = redParams.get('with_idp');
-    idp = providers.filter((p) => p.alias === alias)[0].name;
-  } catch (e) {}
+    idp = providers.filter((p) => p.alias === alias)[0]?.name;
+  } catch (e) {
+    console.log(e);
+  }
   return idp || localStorage.getItem('IDP') || '';
 };
 
@@ -268,12 +270,13 @@ class Subtitle extends Viewable {
 class Header extends Viewable {
   constructor() {
     super();
-    this.view = N('header', [
-      Logo.getView(),
-      Title.getView(),
-      Subtitle.getView(),
-      Search.getView(),
-    ]);
+    this.view = N(
+      'div',
+      [Logo.getView(), Title.getView(), Subtitle.getView(), Search.getView()],
+      {
+        class: 'header',
+      }
+    );
   }
 }
 
