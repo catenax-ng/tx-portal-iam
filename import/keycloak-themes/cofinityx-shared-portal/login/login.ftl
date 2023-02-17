@@ -31,7 +31,7 @@
                         <img class="user-icon" src="${url.resourcesPath}/images/cofinity-X_logo.svg" alt="" />
                         <div class="union-logo-white"></div>
                     </div>
-
+                <div class="signup-wrapper">
                     <div class="signup-container__body">
                         <div class="signup-container__body--header">
                             <div>
@@ -114,6 +114,7 @@
                             </p>
                             </div>
                         </#if>
+                    </div>
                     </div>
                 </div>
                 </#if>   

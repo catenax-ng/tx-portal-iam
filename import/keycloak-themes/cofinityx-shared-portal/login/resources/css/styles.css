@@ -74,6 +74,10 @@ p {
   width: 100%;
 }
 
+.signup-wrapper {
+  width: 50%;
+}
+
 .signup-container__body-parent {
   height: calc(100vh - 7rem);
   display: flex;
@@ -84,6 +88,7 @@ p {
 .signup-container__body-image-container {
   display: flex;
   position: relative;
+  width: 50%;
 }
 
 .union-logo {
@@ -115,7 +120,7 @@ p {
 
 .signup-container__body {
   background: var(--white-color) 0% 0% no-repeat padding-box;
-  width: 61.3rem;
+  width: 75%;
   margin: 0 auto;
   padding: 8.4rem 6.6rem;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
@@ -129,10 +134,10 @@ p {
   box-sizing: border-box;
 }
 
-@media screen and (min-width: 1400px) and (max-width:1800px) {
+@media screen and (min-width: 1300px) and (max-width: 1800px) {
   .signup-container__body {
-    padding: 3.4rem 6.6rem;
-    transform: scale(0.8);
+    padding: 5rem 6.6rem 3rem 6.6rem;
+    transform: scale(0.9);
     max-height: calc(100vh - 4rem);
   }
 }
