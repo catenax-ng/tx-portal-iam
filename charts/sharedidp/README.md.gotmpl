@@ -1,0 +1,43 @@
+# {{ template "chart.description" . }}
+
+{{ template "chart.versionBadge" . }}{{ template "chart.typeBadge" . }}{{ template "chart.appVersionBadge" . }}
+
+This helm chart installs the {{ template "chart.description" . }}.
+
+The referenced container images are for demonstration purposes only.
+
+## Installation
+
+To install the chart with the release name `sharedidp`:
+
+### Stable Repository
+
+```shell
+$ helm repo add tractusx https://eclipse-tractusx.github.io/charts/stable
+$ helm install sharedidp tractusx-stable/sharedidp
+```
+
+To install the Helm chart into your cluster:
+
+```shell
+$ helm install -f your-values.yaml sharedidp tractusx-stable/sharedidp
+```
+
+### Dev Repository
+
+```shell
+$ helm repo add tractusx-dev https://eclipse-tractusx.github.io/charts/dev
+$ helm install sharedidp tractusx-dev/sharedidp
+```
+
+To install the Helm chart into your cluster:
+
+```shell
+$ helm install -f your-values.yaml sharedidp tractusx-dev/sharedidp
+```
+
+{{ template "chart.requirementsSection" . }}
+
+{{ template "chart.valuesSection" . }}
+
+{{ template "helm-docs.versionFooter" . }}
