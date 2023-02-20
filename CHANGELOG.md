@@ -20,6 +20,7 @@ New features, fixed bugs, known defects and other noteworthy changes to each rel
 * added documentation for installation and changelog.
 
 ### Bugfix
+
 * fixed sharedidp login theme.
 * added temporary fix for cve-2023-0286.
 
