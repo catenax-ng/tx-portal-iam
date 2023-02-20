@@ -24,3 +24,4 @@
 
 # Custom dirs and files
 argocd/
+*.gotmpl
