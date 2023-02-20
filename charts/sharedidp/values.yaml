@@ -111,9 +111,16 @@ keycloak:
           - get
           - list
   postgresql:
+  # -- PostgreSQL chart configuration;
+  # default configurations:
+  # host: "sharedidp-postgresql-primary",
+  # port: 5432;
+    # Switch to enable or disable the PostgreSQL helm chart.
     enabled: true
     auth:
+      # -- Non-root username.
       username: kcshared
+      # -- Database name.
       database: iamsharedidp
       # -- Secret containing the passwords for root usernames postgres and non-root username kcshared.
       existingSecret: "sharedidp-postgres"
@@ -121,7 +128,7 @@ keycloak:
   externalDatabase:
   # -- External PostgreSQL configuration
   # IMPORTANT: non-root db user needs needs to be created beforehand on external database.
-    # Database host.
+    # Database host ('-primary' is added as postfix).
     host: "sharedidp-postgresql-external-db"
     # -- Database port number.
     port: 5432

@@ -103,11 +103,18 @@ dependencies:
 | keycloak.rbac.rules[0].resources[0] | string | `"pods"` |  |
 | keycloak.rbac.rules[0].verbs[0] | string | `"get"` |  |
 | keycloak.rbac.rules[0].verbs[1] | string | `"list"` |  |
-| keycloak.postgresql.enabled | bool | `true` |  |
-| keycloak.postgresql.auth.username | string | `"kcshared"` |  |
-| keycloak.postgresql.auth.database | string | `"iamsharedidp"` |  |
+| keycloak.postgresql.enabled | bool | `true` | PostgreSQL chart configuration; default configurations: host: "sharedidp-postgresql-primary", port: 5432; Switch to enable or disable the PostgreSQL helm chart. |
+| keycloak.postgresql.auth.username | string | `"kcshared"` | Non-root username. |
+| keycloak.postgresql.auth.database | string | `"iamsharedidp"` | Database name. |
 | keycloak.postgresql.auth.existingSecret | string | `"sharedidp-postgres"` | Secret containing the passwords for root usernames postgres and non-root username kcshared. |
 | keycloak.postgresql.architecture | string | `"replication"` |  |
+| keycloak.externalDatabase.host | string | `"sharedidp-postgresql-external-db"` | External PostgreSQL configuration IMPORTANT: non-root db user needs needs to be created beforehand on external database. Database host ('-primary' is added as postfix). |
+| keycloak.externalDatabase.port | int | `5432` | Database port number. |
+| keycloak.externalDatabase.user | string | `"kcshared"` | Non-root username for sharedidp. |
+| keycloak.externalDatabase.database | string | `"iamsharedidp"` | Database name. |
+| keycloak.externalDatabase.password | string | `""` | Password for the non-root username (default 'kcshared'). Secret-key 'password'. |
+| keycloak.externalDatabase.existingSecret | string | `"sharedidp-keycloak-external-db"` | Secret containing the password non-root username, (default 'kcshared'). |
+| keycloak.externalDatabase.existingSecretPasswordKey | string | `"password"` | Name of an existing secret key containing the database credentials. |
 | secrets.auth.existingSecret.adminpassword | string | `""` | Password for the admin username 'admin'. Secret-key 'admin-password'. |
 | secrets.auth.existingSecret.managementpassword | string | `""` | Password Wildfly management username 'manager'. Secret-key 'management-password'. |
 | secrets.postgresql.auth.existingSecret.postgrespassword | string | `""` | Password for the root username 'postgres'. Secret-key 'postgres-password'. |
