@@ -4,36 +4,56 @@
 
 This helm chart installs the {{ template "chart.description" . }}.
 
+For further information please refer to the [technical documentation](https://github.com/eclipse-tractusx/portal-assets/tree/{{ template "chart.version" . }}/developer/Technical%20Documentation).
+
 The referenced container images are for demonstration purposes only.
 
 ## Installation
 
-To install the chart with the release name `sharedidp`:
+To install the chart with the release name `{{ template "chart.name" . }}`:
 
 ### Stable Repository
 
 ```shell
 $ helm repo add tractusx https://eclipse-tractusx.github.io/charts/stable
-$ helm install sharedidp tractusx-stable/sharedidp
+$ helm install {{ template "chart.name" . }} tractusx/{{ template "chart.name" . }}
 ```
 
-To install the Helm chart into your cluster:
+To install the helm chart into your cluster with your values:
 
 ```shell
-$ helm install -f your-values.yaml sharedidp tractusx-stable/sharedidp
+$ helm install -f your-values.yaml {{ template "chart.name" . }} tractusx/{{ template "chart.name" . }}
+```
+
+To use the helm chart as a dependency:
+
+```yaml
+dependencies:
+  - name: {{ template "chart.name" . }}
+    repository: https://eclipse-tractusx.github.io/charts/stable
+    version: {{ template "chart.version" . }}
 ```
 
 ### Dev Repository
 
 ```shell
 $ helm repo add tractusx-dev https://eclipse-tractusx.github.io/charts/dev
-$ helm install sharedidp tractusx-dev/sharedidp
+$ helm install {{ template "chart.name" . }} tractusx-dev/{{ template "chart.name" . }}
 ```
 
-To install the Helm chart into your cluster:
+To install the helm chart into your cluster with your values:
 
 ```shell
-$ helm install -f your-values.yaml sharedidp tractusx-dev/sharedidp
+$ helm install -f your-values.yaml {{ template "chart.name" . }} tractusx-dev/{{ template "chart.name" . }}
+```
+
+To use the helm chart as a dependency:
+
+```yaml
+dependencies:
+  - name: {{ template "chart.name" . }}
+    repository: https://eclipse-tractusx.github.io/charts/dev
+    version: {{ template "chart.version" . }}
 ```
 
 {{ template "chart.requirementsSection" . }}

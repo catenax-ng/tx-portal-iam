@@ -4,6 +4,8 @@
 
 This helm chart installs the Helm chart for Catena-X Central Keycloak Instance.
 
+For further information please refer to the [technical documentation](https://github.com/eclipse-tractusx/portal-assets/tree/1.0.0-RC2/developer/Technical%20Documentation).
+
 The referenced container images are for demonstration purposes only.
 
 ## Installation
@@ -14,13 +16,22 @@ To install the chart with the release name `centralidp`:
 
 ```shell
 $ helm repo add tractusx https://eclipse-tractusx.github.io/charts/stable
-$ helm install centralidp tractusx-stable/centralidp
+$ helm install centralidp tractusx/centralidp
 ```
 
-To install the Helm chart into your cluster:
+To install the helm chart into your cluster with your values:
 
 ```shell
-$ helm install -f your-values.yaml centralidp tractusx-stable/centralidp
+$ helm install -f your-values.yaml centralidp tractusx/centralidp
+```
+
+To use the helm chart as a dependency:
+
+```yaml
+dependencies:
+  - name: centralidp
+    repository: https://eclipse-tractusx.github.io/charts/stable
+    version: 1.0.0-RC2
 ```
 
 ### Dev Repository
@@ -30,10 +41,19 @@ $ helm repo add tractusx-dev https://eclipse-tractusx.github.io/charts/dev
 $ helm install centralidp tractusx-dev/centralidp
 ```
 
-To install the Helm chart into your cluster:
+To install the helm chart into your cluster with your values:
 
 ```shell
 $ helm install -f your-values.yaml centralidp tractusx-dev/centralidp
+```
+
+To use the helm chart as a dependency:
+
+```yaml
+dependencies:
+  - name: centralidp
+    repository: https://eclipse-tractusx.github.io/charts/dev
+    version: 1.0.0-RC2
 ```
 
 ## Requirements
@@ -85,11 +105,11 @@ $ helm install -f your-values.yaml centralidp tractusx-dev/centralidp
 | keycloak.service.sessionAffinity | string | `"ClientIP"` |  |
 | keycloak.ingress.enabled | bool | `false` |  |
 | keycloak.ingress.ingressClassName | string | `"nginx"` |  |
-| keycloak.ingress.hostname | string | `"centralidp.dummy"` |  |
+| keycloak.ingress.hostname | string | `"centralidp.example.org"` |  |
 | keycloak.ingress.annotations."cert-manager.io/cluster-issuer" | string | `""` |  |
 | keycloak.ingress.annotations."nginx.ingress.kubernetes.io/cors-allow-credentials" | string | `"true"` |  |
 | keycloak.ingress.annotations."nginx.ingress.kubernetes.io/cors-allow-methods" | string | `"PUT, GET, POST, OPTIONS"` |  |
-| keycloak.ingress.annotations."nginx.ingress.kubernetes.io/cors-allow-origin" | string | `""` |  |
+| keycloak.ingress.annotations."nginx.ingress.kubernetes.io/cors-allow-origin" | string | `"https://centralidp.example.org"` |  |
 | keycloak.ingress.annotations."nginx.ingress.kubernetes.io/enable-cors" | string | `"true"` |  |
 | keycloak.ingress.annotations."nginx.ingress.kubernetes.io/proxy-buffer-size" | string | `"128k"` |  |
 | keycloak.ingress.annotations."nginx.ingress.kubernetes.io/proxy-buffering" | string | `"on"` |  |

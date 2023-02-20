@@ -4,6 +4,8 @@
 
 This helm chart installs the Helm chart for Catena-X Shared Keycloak Instance.
 
+For further information please refer to the [technical documentation](https://github.com/eclipse-tractusx/portal-assets/tree/1.0.0-RC2/developer/Technical%20Documentation).
+
 The referenced container images are for demonstration purposes only.
 
 ## Installation
@@ -14,13 +16,22 @@ To install the chart with the release name `sharedidp`:
 
 ```shell
 $ helm repo add tractusx https://eclipse-tractusx.github.io/charts/stable
-$ helm install sharedidp tractusx-stable/sharedidp
+$ helm install sharedidp tractusx/sharedidp
 ```
 
-To install the Helm chart into your cluster:
+To install the helm chart into your cluster with your values:
 
 ```shell
-$ helm install -f your-values.yaml sharedidp tractusx-stable/sharedidp
+$ helm install -f your-values.yaml sharedidp tractusx/sharedidp
+```
+
+To use the helm chart as a dependency:
+
+```yaml
+dependencies:
+  - name: sharedidp
+    repository: https://eclipse-tractusx.github.io/charts/stable
+    version: 1.0.0-RC2
 ```
 
 ### Dev Repository
@@ -30,10 +41,19 @@ $ helm repo add tractusx-dev https://eclipse-tractusx.github.io/charts/dev
 $ helm install sharedidp tractusx-dev/sharedidp
 ```
 
-To install the Helm chart into your cluster:
+To install the helm chart into your cluster with your values:
 
 ```shell
 $ helm install -f your-values.yaml sharedidp tractusx-dev/sharedidp
+```
+
+To use the helm chart as a dependency:
+
+```yaml
+dependencies:
+  - name: sharedidp
+    repository: https://eclipse-tractusx.github.io/charts/dev
+    version: 1.0.0-RC2
 ```
 
 ## Requirements
@@ -91,11 +111,11 @@ $ helm install -f your-values.yaml sharedidp tractusx-dev/sharedidp
 | keycloak.service.sessionAffinity | string | `"ClientIP"` |  |
 | keycloak.ingress.enabled | bool | `false` |  |
 | keycloak.ingress.ingressClassName | string | `"nginx"` |  |
-| keycloak.ingress.hostname | string | `"sharedidp.dummy"` |  |
+| keycloak.ingress.hostname | string | `"sharedidp.example.org"` |  |
 | keycloak.ingress.annotations."cert-manager.io/cluster-issuer" | string | `""` |  |
 | keycloak.ingress.annotations."nginx.ingress.kubernetes.io/cors-allow-credentials" | string | `"true"` |  |
 | keycloak.ingress.annotations."nginx.ingress.kubernetes.io/cors-allow-methods" | string | `"PUT, GET, POST, OPTIONS"` |  |
-| keycloak.ingress.annotations."nginx.ingress.kubernetes.io/cors-allow-origin" | string | `""` |  |
+| keycloak.ingress.annotations."nginx.ingress.kubernetes.io/cors-allow-origin" | string | `"https://sharedidp.example.org"` |  |
 | keycloak.ingress.annotations."nginx.ingress.kubernetes.io/enable-cors" | string | `"true"` |  |
 | keycloak.ingress.annotations."nginx.ingress.kubernetes.io/proxy-buffer-size" | string | `"128k"` |  |
 | keycloak.ingress.annotations."nginx.ingress.kubernetes.io/proxy-buffering" | string | `"on"` |  |
