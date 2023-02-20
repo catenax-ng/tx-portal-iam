@@ -12,30 +12,6 @@ The referenced container images are for demonstration purposes only.
 
 To install the chart with the release name `{{ template "chart.name" . }}`:
 
-### Stable Repository
-
-```shell
-$ helm repo add tractusx https://eclipse-tractusx.github.io/charts/stable
-$ helm install {{ template "chart.name" . }} tractusx/{{ template "chart.name" . }}
-```
-
-To install the helm chart into your cluster with your values:
-
-```shell
-$ helm install -f your-values.yaml {{ template "chart.name" . }} tractusx/{{ template "chart.name" . }}
-```
-
-To use the helm chart as a dependency:
-
-```yaml
-dependencies:
-  - name: {{ template "chart.name" . }}
-    repository: https://eclipse-tractusx.github.io/charts/stable
-    version: {{ template "chart.version" . }}
-```
-
-### Dev Repository
-
 ```shell
 $ helm repo add tractusx-dev https://eclipse-tractusx.github.io/charts/dev
 $ helm install {{ template "chart.name" . }} tractusx-dev/{{ template "chart.name" . }}

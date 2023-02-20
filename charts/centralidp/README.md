@@ -12,30 +12,6 @@ The referenced container images are for demonstration purposes only.
 
 To install the chart with the release name `centralidp`:
 
-### Stable Repository
-
-```shell
-$ helm repo add tractusx https://eclipse-tractusx.github.io/charts/stable
-$ helm install centralidp tractusx/centralidp
-```
-
-To install the helm chart into your cluster with your values:
-
-```shell
-$ helm install -f your-values.yaml centralidp tractusx/centralidp
-```
-
-To use the helm chart as a dependency:
-
-```yaml
-dependencies:
-  - name: centralidp
-    repository: https://eclipse-tractusx.github.io/charts/stable
-    version: 1.0.0-RC2
-```
-
-### Dev Repository
-
 ```shell
 $ helm repo add tractusx-dev https://eclipse-tractusx.github.io/charts/dev
 $ helm install centralidp tractusx-dev/centralidp
