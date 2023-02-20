@@ -118,6 +118,23 @@ keycloak:
       # -- Secret containing the passwords for root usernames postgres and non-root username kcshared.
       existingSecret: "sharedidp-postgres"
     architecture: replication
+  externalDatabase:
+  # -- External PostgreSQL configuration
+  # IMPORTANT: non-root db user needs needs to be created beforehand on external database.
+    # Database host.
+    host: "sharedidp-postgresql-external-db"
+    # -- Database port number.
+    port: 5432
+    # -- Non-root username for sharedidp.
+    user: "kcshared"
+    # -- Database name.
+    database: "iamsharedidp"
+    # -- Password for the non-root username (default 'kcshared'). Secret-key 'password'.
+    password: ""
+    # -- Secret containing the password non-root username, (default 'kcshared').
+    existingSecret: "sharedidp-keycloak-external-db"
+    # -- Name of an existing secret key containing the database credentials.
+    existingSecretPasswordKey: "password"
 
 secrets:
   auth:

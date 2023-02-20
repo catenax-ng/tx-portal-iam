@@ -110,6 +110,23 @@ keycloak:
       # -- Secret containing the passwords for root usernames postgres and non-root username kccentral.
       existingSecret: "centralidp-postgres"
     architecture: replication
+  externalDatabase:
+  # -- External PostgreSQL configuration
+  # IMPORTANT: non-root db user needs needs to be created beforehand on external database.
+    # Database host.
+    host: "centralidp-postgresql-external-db"
+    # -- Database port number.
+    port: 5432
+    # -- Non-root username for centralidp.
+    user: "kccentral"
+    # -- Database name.
+    database: "iamcentralidp"
+    # -- Password for the non-root username (default 'kccentral'). Secret-key 'password'.
+    password: ""
+    # -- Secret containing the password non-root username, (default 'kccentral').
+    existingSecret: "centralidp-keycloak-external-db"
+    # -- Name of an existing secret key containing the database credentials.
+    existingSecretPasswordKey: "password"
 
 secrets:
   auth:
