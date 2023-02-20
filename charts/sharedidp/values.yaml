@@ -17,12 +17,32 @@
 # SPDX-License-Identifier: Apache-2.0
 ###############################################################
 
+secrets:
+  auth:
+    existingSecret:
+      # -- Password for the admin username 'admin'. Secret-key 'admin-password'.
+      adminpassword: ""
+      # -- Password Wildfly management username 'manager'. Secret-key 'management-password'.
+      managementpassword: ""
+  postgresql:
+    auth:
+      existingSecret:
+        # -- Password for the root username 'postgres'. Secret-key 'postgres-password'.
+        postgrespassword: ""
+        # -- Password for the non-root username 'kcshared'. Secret-key 'password'.
+        password: ""
+        # -- Password for the non-root username 'repl_user'. Secret-key 'replication-password'.
+        replicationPassword: ""
+  realmuser:
+    # Enables the import of test users via secret.
+    enabled: false
 keycloak:
   image:
     tag: 16.1.1-debian-10-r103
   auth:
     adminUser: admin
-    existingSecret: sharedidp-keycloak
+    # -- Secret containing the passwords for admin username 'admin' and management username 'manager'.
+    existingSecret: "sharedidp-keycloak"
   proxyAddressForwarding: true
   serviceDiscovery:
     enabled: true
@@ -83,8 +103,12 @@ keycloak:
   ingress:
     enabled: false
     ingressClassName: "nginx"
+    # -- Provide default path for the ingress record.
     hostname: "sharedidp.example.org"
     annotations:
+      # -- Enable TLS configuration for the host defined at `ingress.hostname` parameter;
+      # TLS certificates will be retrieved from a TLS secret with name: `{{- printf "%s-tls" .Values.ingress.hostname }}`;
+      # Provide the name of ClusterIssuer to acquire the certificate required for this Ingress
       cert-manager.io/cluster-issuer: ""
       nginx.ingress.kubernetes.io/cors-allow-credentials: "true"
       nginx.ingress.kubernetes.io/cors-allow-methods: "PUT, GET, POST, OPTIONS"
@@ -110,19 +134,6 @@ keycloak:
     auth:
       username: kcshared
       database: iamsharedidp
-      existingSecret: sharedidp-postgres
+      # -- Secret containing the passwords for root usernames postgres and non-root username kcshared.
+      existingSecret: "sharedidp-postgres"
     architecture: replication
-
-secrets:
-  auth:
-    existingSecret:
-      adminpassword: ""
-      managementpassword: ""
-  postgresql:
-    auth:
-      existingSecret:
-        postgrespassword: ""
-        password: ""
-        replicationPassword: ""
-  realmuser:
-    enabled: false

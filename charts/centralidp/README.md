@@ -42,9 +42,14 @@ dependencies:
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
+| secrets.auth.existingSecret.adminpassword | string | `""` | Password for the admin username 'admin'. Secret-key 'admin-password'. |
+| secrets.auth.existingSecret.managementpassword | string | `""` | Password Wildfly management username 'manager'. Secret-key 'management-password'. |
+| secrets.postgresql.auth.existingSecret.postgrespassword | string | `""` | Password for the root username 'postgres'. Secret-key 'postgres-password'. |
+| secrets.postgresql.auth.existingSecret.password | string | `""` | Password for the non-root username 'kccentral'. Secret-key 'password'. |
+| secrets.postgresql.auth.existingSecret.replicationPassword | string | `""` | Password for the non-root username 'repl_user'. Secret-key 'replication-password'. |
 | keycloak.image.tag | string | `"16.1.1-debian-10-r103"` |  |
 | keycloak.auth.adminUser | string | `"admin"` |  |
-| keycloak.auth.existingSecret | string | `"centralidp-keycloak"` |  |
+| keycloak.auth.existingSecret | string | `"centralidp-keycloak"` | Secret containing the passwords for admin username 'admin' and management username 'manager'. |
 | keycloak.proxyAddressForwarding | bool | `true` |  |
 | keycloak.serviceDiscovery.enabled | bool | `true` |  |
 | keycloak.extraEnvVars[0].name | string | `"KEYCLOAK_USER"` |  |
@@ -81,8 +86,8 @@ dependencies:
 | keycloak.service.sessionAffinity | string | `"ClientIP"` |  |
 | keycloak.ingress.enabled | bool | `false` |  |
 | keycloak.ingress.ingressClassName | string | `"nginx"` |  |
-| keycloak.ingress.hostname | string | `"centralidp.example.org"` |  |
-| keycloak.ingress.annotations."cert-manager.io/cluster-issuer" | string | `""` |  |
+| keycloak.ingress.hostname | string | `"centralidp.example.org"` | Provide default path for the ingress record. |
+| keycloak.ingress.annotations."cert-manager.io/cluster-issuer" | string | `""` | Enable TLS configuration for the host defined at `ingress.hostname` parameter; TLS certificates will be retrieved from a TLS secret with name: `{{- printf "%s-tls" .Values.ingress.hostname }}`; Provide the name of ClusterIssuer to acquire the certificate required for this Ingress |
 | keycloak.ingress.annotations."nginx.ingress.kubernetes.io/cors-allow-credentials" | string | `"true"` |  |
 | keycloak.ingress.annotations."nginx.ingress.kubernetes.io/cors-allow-methods" | string | `"PUT, GET, POST, OPTIONS"` |  |
 | keycloak.ingress.annotations."nginx.ingress.kubernetes.io/cors-allow-origin" | string | `"https://centralidp.example.org"` |  |
@@ -100,11 +105,6 @@ dependencies:
 | keycloak.postgresql.enabled | bool | `true` |  |
 | keycloak.postgresql.auth.username | string | `"kccentral"` |  |
 | keycloak.postgresql.auth.database | string | `"iamcentralidp"` |  |
-| keycloak.postgresql.auth.existingSecret | string | `"centralidp-postgres"` |  |
+| keycloak.postgresql.auth.existingSecret | string | `"centralidp-postgres"` | Secret containing the passwords for root usernames postgres and non-root username kccentral. |
 | keycloak.postgresql.architecture | string | `"replication"` |  |
-| secrets.auth.existingSecret.adminpassword | string | `""` |  |
-| secrets.auth.existingSecret.managementpassword | string | `""` |  |
-| secrets.postgresql.auth.existingSecret.postgrespassword | string | `""` |  |
-| secrets.postgresql.auth.existingSecret.password | string | `""` |  |
-| secrets.postgresql.auth.existingSecret.replicationPassword | string | `""` |  |
 
