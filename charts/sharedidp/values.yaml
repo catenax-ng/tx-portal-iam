@@ -17,25 +17,6 @@
 # SPDX-License-Identifier: Apache-2.0
 ###############################################################
 
-secrets:
-  auth:
-    existingSecret:
-      # -- Password for the admin username 'admin'. Secret-key 'admin-password'.
-      adminpassword: ""
-      # -- Password Wildfly management username 'manager'. Secret-key 'management-password'.
-      managementpassword: ""
-  postgresql:
-    auth:
-      existingSecret:
-        # -- Password for the root username 'postgres'. Secret-key 'postgres-password'.
-        postgrespassword: ""
-        # -- Password for the non-root username 'kcshared'. Secret-key 'password'.
-        password: ""
-        # -- Password for the non-root username 'repl_user'. Secret-key 'replication-password'.
-        replicationPassword: ""
-  realmuser:
-    # Enables the import of test users via secret.
-    enabled: false
 keycloak:
   image:
     tag: 16.1.1-debian-10-r103
@@ -137,3 +118,23 @@ keycloak:
       # -- Secret containing the passwords for root usernames postgres and non-root username kcshared.
       existingSecret: "sharedidp-postgres"
     architecture: replication
+
+secrets:
+  auth:
+    existingSecret:
+      # -- Password for the admin username 'admin'. Secret-key 'admin-password'.
+      adminpassword: ""
+      # -- Password Wildfly management username 'manager'. Secret-key 'management-password'.
+      managementpassword: ""
+  postgresql:
+    auth:
+      existingSecret:
+        # -- Password for the root username 'postgres'. Secret-key 'postgres-password'.
+        postgrespassword: ""
+        # -- Password for the non-root username 'kcshared'. Secret-key 'password'.
+        password: ""
+        # -- Password for the non-root username 'repl_user'. Secret-key 'replication-password'.
+        replicationPassword: ""
+  realmuser:
+    # Enables the import of test users via secret.
+    enabled: false

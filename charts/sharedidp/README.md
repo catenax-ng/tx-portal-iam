@@ -42,12 +42,6 @@ dependencies:
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| secrets.auth.existingSecret.adminpassword | string | `""` | Password for the admin username 'admin'. Secret-key 'admin-password'. |
-| secrets.auth.existingSecret.managementpassword | string | `""` | Password Wildfly management username 'manager'. Secret-key 'management-password'. |
-| secrets.postgresql.auth.existingSecret.postgrespassword | string | `""` | Password for the root username 'postgres'. Secret-key 'postgres-password'. |
-| secrets.postgresql.auth.existingSecret.password | string | `""` | Password for the non-root username 'kcshared'. Secret-key 'password'. |
-| secrets.postgresql.auth.existingSecret.replicationPassword | string | `""` | Password for the non-root username 'repl_user'. Secret-key 'replication-password'. |
-| secrets.realmuser.enabled | bool | `false` |  |
 | keycloak.image.tag | string | `"16.1.1-debian-10-r103"` |  |
 | keycloak.auth.adminUser | string | `"admin"` |  |
 | keycloak.auth.existingSecret | string | `"sharedidp-keycloak"` | Secret containing the passwords for admin username 'admin' and management username 'manager'. |
@@ -114,4 +108,10 @@ dependencies:
 | keycloak.postgresql.auth.database | string | `"iamsharedidp"` |  |
 | keycloak.postgresql.auth.existingSecret | string | `"sharedidp-postgres"` | Secret containing the passwords for root usernames postgres and non-root username kcshared. |
 | keycloak.postgresql.architecture | string | `"replication"` |  |
+| secrets.auth.existingSecret.adminpassword | string | `""` | Password for the admin username 'admin'. Secret-key 'admin-password'. |
+| secrets.auth.existingSecret.managementpassword | string | `""` | Password Wildfly management username 'manager'. Secret-key 'management-password'. |
+| secrets.postgresql.auth.existingSecret.postgrespassword | string | `""` | Password for the root username 'postgres'. Secret-key 'postgres-password'. |
+| secrets.postgresql.auth.existingSecret.password | string | `""` | Password for the non-root username 'kcshared'. Secret-key 'password'. |
+| secrets.postgresql.auth.existingSecret.replicationPassword | string | `""` | Password for the non-root username 'repl_user'. Secret-key 'replication-password'. |
+| secrets.realmuser.enabled | bool | `false` |  |
 
