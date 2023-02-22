@@ -1614,7 +1614,7 @@
         },
         {
           "id": "b5c9ff05-b0cf-414d-bd70-e38f8e4923cf",
-          "name": "BPDM Pool",
+          "name": "BPDM Management",
           "composite": true,
           "composites": {
             "client": {
@@ -7490,7 +7490,6 @@
     {
       "id": "cdf11dff-530a-4fd4-97b9-84e4d60ac21e",
       "clientId": "sa-cl1-reg-2",
-      "description": "Technical User for Portal-Backend to call Keycloak (portal helm chart: backend.keycloak.central.clientId)",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
@@ -8165,7 +8164,7 @@
     {
       "id": "50fa6455-a775-4683-b407-57a33a9b9f3b",
       "clientId": "sa-cl5-custodian-2",
-      "description": "Technical User for Portal to call Custodian Wallet (portal helm chart: backend.checklistworker.custodian.clientId)",
+      "description": "Technical User for Portal to call Custodian Wallet",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
@@ -8725,7 +8724,7 @@
       "id": "1a7d3f02-66cf-495b-af96-ad095e6219b4",
       "clientId": "sa-cl6-cx-01",
       "name": "sa-cl6-cx-01",
-      "description": "Technical user for portal to daps connector registration call (portal helm chart: backend.administration.daps.clientId)",
+      "description": "Technical user for portal to daps connector registration call",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
@@ -12774,7 +12773,7 @@
     {
       "id": "183aae87-c9cf-4d70-934b-629aa6974c54",
       "clientId": "sa-cl7-cx-5",
-      "description": "User for Portal to access BPDM for Company Address publishing into the BPDM (portal helm chart: backend.checklistworker.bpdm.clientId)",
+      "description": "User for Portal to access BPDM for Company Address publishing into the BPDM",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
@@ -12882,7 +12881,7 @@
     {
       "id": "c2bdc736-ca35-43c4-8e18-27e7425df9f0",
       "clientId": "sa-cl8-cx-1",
-      "description": "Technical User for Portal to SD (portal helm chart: backend.checklistworker.sdfactory.clientId)",
+      "description": "Technical User for Portal to SD (SPOC: Julia)",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
