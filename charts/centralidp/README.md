@@ -125,7 +125,7 @@ Once the installation is completed, the following steps need to be executed in t
 
 2. Establish connection to the sharedidp instance
 
-In order to enable the login of the initial user 'cx-operator@cx.com', the connection between the 'CX-Operator' identity provider of the centralidp instance and the according realm in the sharedidp instance needs to be established.
+In order to enable the login of the initial user (see CX-Operator realm in sharedidp instance for username), the connection between the 'CX-Operator' identity provider of the centralidp instance and the according realm in the sharedidp instance needs to be established.
 This is done by setting the 'example.org' placeholder in the CX-Operator' Identity Provider to the address of the sharedidp instance.
 
 3. Setup SMTP configuration (Realm Settings --> Email)

@@ -141,6 +141,6 @@ Generate client-secrets for the service account with access type 'confidential'.
 * Settings --> Valid Redirect URI
 * Keys --> JWKS URL
 
-2. Set password and user details for the initial user 'cx-operator@cx.com'.
+2. Set password and user details for the initial user.
 
 3. Setup SMTP configuration (Realm Settings --> Email)
