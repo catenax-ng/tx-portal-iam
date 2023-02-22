@@ -39,7 +39,7 @@ keycloak:
       mountPath: "/secrets"
   initContainers:
     - name: import
-      image: ghcr.io/catenax-ng/tx-portal-iam_iam-import-pre-prod:v1.0.0-RC2
+      image: ghcr.io/catenax-ng/tx-portal-iam_iam-import-pre-prod:v1.0.0
       imagePullPolicy: Always
       command:
         - sh
