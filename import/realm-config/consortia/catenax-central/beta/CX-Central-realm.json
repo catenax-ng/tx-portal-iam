@@ -1614,7 +1614,7 @@
         },
         {
           "id": "b5c9ff05-b0cf-414d-bd70-e38f8e4923cf",
-          "name": "BPDM Pool",
+          "name": "BPDM Management",
           "composite": true,
           "composites": {
             "client": {
