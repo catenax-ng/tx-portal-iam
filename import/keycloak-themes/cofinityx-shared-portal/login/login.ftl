@@ -72,6 +72,8 @@
                                         placeholder="Enter email"
                                         id="username"
                                         name="username"
+                                        minlength="2" 
+                                        maxlength="128"
                                         type="text"
                                         autofocus
                                     />
@@ -88,6 +90,8 @@
                                         id="password"
                                         name="password"
                                         type="password"
+                                        minlength="8" 
+                                        maxlength="64"
                                         autofocus
                                         />
                                         <#if pwdError??>
