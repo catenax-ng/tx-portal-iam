@@ -30,7 +30,7 @@ keycloak:
       mountPath: "/realms"
   initContainers:
     - name: import
-      image: ghcr.io/catenax-ng/tx-portal-iam_iam-import-int:v1.0.0
+      image: ghcr.io/catenax-ng/tx-portal-iam_iam-import-dev:v1.1.0
       imagePullPolicy: Always
       command:
         - sh
@@ -49,12 +49,12 @@ keycloak:
   ingress:
     enabled: true
     ingressClassName: nginx
-    hostname: centralidp-templateconsortia.int.demo.catena-x.net
+    hostname: centralidp-templateconsortia.dev.demo.catena-x.net
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt-prod
       nginx.ingress.kubernetes.io/cors-allow-credentials: "true"
       nginx.ingress.kubernetes.io/cors-allow-methods: PUT, GET, POST, OPTIONS
-      nginx.ingress.kubernetes.io/cors-allow-origin: https://centralidp-templateconsortia.int.demo.catena-x.net, http://localhost:3000
+      nginx.ingress.kubernetes.io/cors-allow-origin: https://centralidp-templateconsortia.dev.demo.catena-x.net, http://localhost:3000
       nginx.ingress.kubernetes.io/enable-cors: "true"
       nginx.ingress.kubernetes.io/proxy-buffer-size: 128k
       nginx.ingress.kubernetes.io/proxy-buffering: "on"
@@ -65,11 +65,11 @@ keycloak:
 secrets:
   auth:
     existingSecret:
-      adminpassword: "<path:portal/data/int/iam/centralidp-keycloak#admin-password>"
-      managementpassword: "<path:portal/data/int/iam/centralidp-keycloak#management-password>"
+      adminpassword: "<path:portal/data/dev/iam/centralidp-keycloak#admin-password>"
+      managementpassword: "<path:portal/data/dev/iam/centralidp-keycloak#management-password>"
   postgresql:
     auth:
       existingSecret:
-        postgrespassword: "<path:portal/data/int/iam/centralidp-postgres#postgres-password>"
-        password: "<path:portal/data/int/iam/centralidp-postgres#password>"
-        replicationPassword: "<path:portal/data/int/iam/centralidp-postgres#replication-password>"
+        postgrespassword: "<path:portal/data/dev/iam/centralidp-postgres#postgres-password>"
+        password: "<path:portal/data/dev/iam/centralidp-postgres#password>"
+        replicationPassword: "<path:portal/data/dev/iam/centralidp-postgres#replication-password>"
