@@ -57,12 +57,12 @@ keycloak:
   ingress:
     enabled: true
     ingressClassName: nginx
-    hostname: sharedidp-templategeneric.int.demo.catena-x.net
+    hostname: sharedidp-templategeneric.dev.demo.catena-x.net
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt-prod
       nginx.ingress.kubernetes.io/cors-allow-credentials: "true"
       nginx.ingress.kubernetes.io/cors-allow-methods: PUT, GET, POST, OPTIONS
-      nginx.ingress.kubernetes.io/cors-allow-origin: https://sharedidp-templategeneric.int.demo.catena-x.net, http://localhost:3000
+      nginx.ingress.kubernetes.io/cors-allow-origin: https://sharedidp-templategeneric.dev.demo.catena-x.net, http://localhost:3000
       nginx.ingress.kubernetes.io/enable-cors: "true"
       nginx.ingress.kubernetes.io/proxy-buffer-size: 128k
       nginx.ingress.kubernetes.io/proxy-buffering: "on"
@@ -73,13 +73,13 @@ keycloak:
 secrets:
   auth:
     existingSecret:
-      adminpassword: "<path:portal/data/int/iam/sharedidp-keycloak#admin-password>"
-      managementpassword: "<path:portal/data/int/iam/sharedidp-keycloak#management-password>"
+      adminpassword: "<path:portal/data/dev/iam/sharedidp-keycloak#admin-password>"
+      managementpassword: "<path:portal/data/dev/iam/sharedidp-keycloak#management-password>"
   postgresql:
     auth:
       existingSecret:
-        postgrespassword: "<path:portal/data/int/iam/sharedidp-postgres#postgres-password>"
-        password: "<path:portal/data/int/iam/sharedidp-postgres#password>"
-        replicationPassword: "<path:portal/data/int/iam/sharedidp-postgres#replication-password>"
+        postgrespassword: "<path:portal/data/dev/iam/sharedidp-postgres#postgres-password>"
+        password: "<path:portal/data/dev/iam/sharedidp-postgres#password>"
+        replicationPassword: "<path:portal/data/dev/iam/sharedidp-postgres#replication-password>"
   realmuser:
     enabled: false
