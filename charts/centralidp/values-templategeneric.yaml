@@ -65,11 +65,11 @@ keycloak:
 secrets:
   auth:
     existingSecret:
-      adminpassword: "<path:portal/data/int/iam/centralidp-keycloak#admin-password>"
-      managementpassword: "<path:portal/data/int/iam/centralidp-keycloak#management-password>"
+      adminpassword: "<path:portal/data/dev/iam/centralidp-keycloak#admin-password>"
+      managementpassword: "<path:portal/data/dev/iam/centralidp-keycloak#management-password>"
   postgresql:
     auth:
       existingSecret:
-        postgrespassword: "<path:portal/data/int/iam/centralidp-postgres#postgres-password>"
-        password: "<path:portal/data/int/iam/centralidp-postgres#password>"
-        replicationPassword: "<path:portal/data/int/iam/centralidp-postgres#replication-password>"
+        postgrespassword: "<path:portal/data/dev/iam/centralidp-postgres#postgres-password>"
+        password: "<path:portal/data/dev/iam/centralidp-postgres#password>"
+        replicationPassword: "<path:portal/data/dev/iam/centralidp-postgres#replication-password>"
