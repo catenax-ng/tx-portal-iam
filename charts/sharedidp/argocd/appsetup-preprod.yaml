@@ -11,7 +11,6 @@ spec:
     repoURL: 'https://github.com/catenax-ng/tx-portal-iam.git'
     targetRevision: sharedidp-1.1.0
     plugin:
-      name: argocd-vault-plugin-helm-args
       env:
         - name: AVP_SECRET
           value: vault-secret
